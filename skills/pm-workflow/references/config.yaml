@@ -1,0 +1,29 @@
+# 产品经理工作流 Skill 配置
+profile:
+  name: "请填写姓名或称呼"
+  role: "产品经理"
+  product: "请填写产品名称"
+  product_pitch: "请填写产品一句话定位"
+  default_language: "zh-CN"
+output:
+  dir: "media/local-file/{current-session-subdir}"
+  doc_format: "markdown"
+  ppt_engine: "pptx"
+style:
+  tone: "专业、简洁、数据驱动"
+  prd_depth: "standard"
+  report_length: "medium"
+workflow:
+  enabled_tasks:
+    - prd
+    - competitor_analysis
+    - requirement_pool
+    - weekly_report
+    - roadmap
+  default_template: "standard_prd"
+templates:
+  prd: "references/templates.md#prd"
+  competitor: "references/templates.md#competitor"
+  reqpool: "references/templates.md#reqpool"
+  report: "references/templates.md#report"
+  roadmap: "references/templates.md#roadmap"

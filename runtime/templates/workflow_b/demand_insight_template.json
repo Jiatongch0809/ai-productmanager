@@ -1,0 +1,37 @@
+{
+  "opportunity_id": "",
+  "stage": "DEMAND_INSIGHT",
+  "completed_at": "",
+  "user_problem": "",
+  "target_users": [
+    {
+      "persona": "",
+      "pain_point": "",
+      "frequency": "高频|中频|低频"
+    }
+  ],
+  "use_cases": [
+    {
+      "scenario": "",
+      "user_goal": "",
+      "current_solution": "",
+      "gap": ""
+    }
+  ],
+  "core_needs": [
+    {
+      "need": "",
+      "priority": "P0|P1|P2",
+      "evidence": ""
+    }
+  ],
+  "market_gaps": [
+    {
+      "gap": "",
+      "opportunity_size": "大|中|小",
+      "competitor_coverage": "无|部分|充分"
+    }
+  ],
+  "recommended_direction": "",
+  "success_criteria": []
+}

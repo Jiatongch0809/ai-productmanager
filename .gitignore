@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv*/
+venv/
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OpenClaw local state
+.openclaw/
+memory/
+DREAMS.md
+
+# Runtime data (generated)
+runtime/evidence_ledger/
+runtime/workflow_state/
+runtime/tasks/
+runtime/logs/
+runtime/outputs/
+runtime/test-results/
+
+# Delivery files
+media/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.bak.*

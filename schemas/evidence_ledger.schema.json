@@ -1,0 +1,173 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence Ledger",
+  "type": "object",
+  "required": ["schema_version", "opportunity_id", "identity"],
+  "properties": {
+    "schema_version": {
+      "type": "integer",
+      "const": 1
+    },
+    "opportunity_id": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "identity": {
+      "type": "object",
+      "required": ["product_name"],
+      "properties": {
+        "product_name": {
+          "type": "string"
+        },
+        "product_definition": {
+          "type": "string"
+        },
+        "target_user": {
+          "type": "string"
+        },
+        "target_customer": {
+          "type": "string"
+        },
+        "core_scenario": {
+          "type": "string"
+        },
+        "core_problem": {
+          "type": "string"
+        },
+        "target_price_range": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "time_scope": {
+          "type": "string"
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "fact", "source", "stage_added", "added_at"],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "fact": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "grade": {
+            "type": "string",
+            "enum": ["A", "B", "C"]
+          },
+          "signal": {
+            "type": "string"
+          },
+          "stage_added": {
+            "type": "string"
+          },
+          "added_at": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    },
+    "six_lens": {
+      "type": "object",
+      "properties": {
+        "conclusion": {},
+        "evidence_tasks": {
+          "type": "array"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "market": {"type": "object"},
+        "capital": {"type": "object"},
+        "industry": {"type": "object"},
+        "policy": {"type": "object"},
+        "user": {"type": "object"},
+        "competitor": {"type": "object"}
+      }
+    },
+    "fit_assessment": {
+      "type": "object",
+      "properties": {
+        "total_score": {
+          "type": ["number", "null"]
+        },
+        "gate": {
+          "type": ["string", "null"],
+          "enum": ["S51", "S52", "S53", "S54", null]
+        },
+        "gate_description": {
+          "type": "string"
+        },
+        "dimension_scores": {
+          "type": "object"
+        },
+        "calculation_detail": {
+          "type": "object"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array"
+    },
+    "version_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["version", "timestamp", "change"],
+        "properties": {
+          "version": {
+            "type": "integer"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "change": {
+            "type": "string"
+          },
+          "changed_by": {
+            "type": "string"
+          },
+          "before": {
+            "type": "object"
+          },
+          "after": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}

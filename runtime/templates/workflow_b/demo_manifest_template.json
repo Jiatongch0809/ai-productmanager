@@ -1,0 +1,22 @@
+{
+  "opportunity_id": "",
+  "stage": "MODAO_DEMO",
+  "completed_at": "",
+  "modao_task_id": "",
+  "modao_task_url": "",
+  "modao_preview_url": "",
+  "pages": [
+    {
+      "page_name": "",
+      "page_description": "",
+      "components": []
+    }
+  ],
+  "interaction_flows": [
+    {
+      "flow_name": "",
+      "steps": []
+    }
+  ],
+  "demo_status": "completed"
+}
